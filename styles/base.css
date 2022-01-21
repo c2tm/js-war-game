@@ -62,20 +62,6 @@ button {
     z-index: 0;
 }
 
-.input1 {
-    position: absolute;
-    transform: translate(-50%, -50%); 
-    top: 43%;
-    left: 25%;
-}
-
-.input2 {
-    position: absolute;
-    transform: translate(-50%, -50%); 
-    top: 43%;
-    left: 75%;
-}
-
 .text1 {
     position: absolute;
     color: white;
