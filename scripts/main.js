@@ -287,20 +287,6 @@ Game.prototype.display = () => {
 }
 
 Game.prototype.endGame = () => {
-
-    // if(warCounter > 0) {
-    //     if(this.player1.hand.length < 3) {
-    //         endCounter += 1;
-    //         player1StatusText.textContent = `GAME OVER!`;
-    //         player2StatusText.textContent = `GAME OVER!`;
-    //         titleText.textContent = `${this.player2.name} has won the game!`;
-    //     } else if (this.player2.hand.length < 3) {
-    //         endCounter += 1;
-    //         player1StatusText.textContent = `GAME OVER!`;
-    //         player2StatusText.textContent = `GAME OVER!`;
-    //         titleText.textContent = `${this.player2.name} has won the game!`;
-    //     }
-    // }else {
         if(this.player1.hand.length <= 0) {
         endCounter += 1;
         player1StatusText.textContent = `GAME OVER!`;
@@ -312,7 +298,6 @@ Game.prototype.endGame = () => {
         player2StatusText.textContent = `GAME OVER!`;
         titleText.textContent = `${this.player2.name} has won the game!`;
     }
-    // }
 }
 
 
