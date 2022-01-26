@@ -106,7 +106,7 @@ Game.prototype.shuffle = () => {
     //////////////////////TEST DECK///////////////////
 
 
-    for(let i = 0; i <= 25; i++) {
+    for(let i = 0; i <= 50; i+=2) {
         this.player1.hand.push(shuffledDeck[i]);
         this.player2.hand.push(shuffledDeck[i + 1]);
     }
