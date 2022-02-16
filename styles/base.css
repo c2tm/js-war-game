@@ -34,12 +34,6 @@ button {
     transform: translate(-50%, -50%); 
 }
 
-/* .boxes-container {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-} */
-
 .text-box1 {
     position: absolute;
     height: 80px;
@@ -77,6 +71,44 @@ button {
     top: 50%;
     left: 75%; 
     z-index: 1;
+}
+
+.counter-container {
+    position: relative;
+    display: none;
+    height: 10%;
+    width: 45%;
+    top: 30%;
+    left: 27%;
+    
+}
+
+.counter {
+    position: relative;
+    float: left;
+    background-color: brown;
+    top: 44%;
+    bottom: 56%;
+    left: 5.5%;
+    height: 2rem;
+    width: 8rem;
+}
+
+.counter-2 {
+    left: 63.5%;
+}
+
+.cards-left-text {
+    float: left;
+    margin: .5rem 0 0 .8rem;
+    color: white;
+    
+}
+
+.cardamt {
+    float: left;
+    margin: .5rem 0 0 .8rem;
+    color: white;
 }
 
 

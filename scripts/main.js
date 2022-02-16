@@ -8,6 +8,9 @@ const drawCardsButton = document.querySelector(".drawcard");
 const titleText = document.querySelector(".title");
 const player1StatusText = document.querySelector(".text1");
 const player2StatusText = document.querySelector(".text2");
+const player1CardAmtText = document.querySelector(".cardamt1");
+const player2CardAmtText = document.querySelector(".cardamt2");
+const cardAmtContainer = document.querySelector(".counter-container")
 
 let game;
 let pot = [];
@@ -163,8 +166,6 @@ Game.prototype.compareCards = () => {
             pot = [];
 
         } else {
-
-            // console.log('war');
             
             warCounter += 1;
 
@@ -208,19 +209,10 @@ Game.prototype.compareCards = () => {
                 }
 
                 this.player2.hand.splice(0,3);
-
-                // console.log(pot);
-                // console.log(this.player1);
-                // console.log(this.player2);
                 i--;
         }
     }
 
-    // console.log(player1Card[0].name);
-    // console.log(player2Card[0].name);
-
-    // console.log(this.player1);
-    // console.log(this.player2);
 }
 
 Game.prototype.display = () => {
@@ -286,6 +278,15 @@ Game.prototype.display = () => {
 
 }
 
+Game.prototype.displayCardAmt = () => {
+    cardAmtContainer.style.display = 'block';
+}
+
+Game.prototype.updateCardAmt = () => {
+    player1CardAmtText.textContent = this.player1.hand.length;
+    player2CardAmtText.textContent = this.player2.hand.length;
+}
+
 Game.prototype.endGame = () => {
         if(this.player1.hand.length <= 0) {
         endCounter += 1;
@@ -305,6 +306,7 @@ newGameButton.addEventListener("click", () => {
     newGameCounter += 1;
     endCounter = 0;
     game = new Game({});
+    game.displayCardAmt()
 })
 
 
@@ -312,6 +314,7 @@ drawCardsButton.addEventListener("click", () => {
     game.compareCards();
     game.endGame();
     game.display();
+    game.updateCardAmt();
 });
   
 
